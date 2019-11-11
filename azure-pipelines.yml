@@ -10,8 +10,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: S3Upload@0
+- task: S3Upload@1
   inputs:
-    BucketName: 'www.lap-it.com.s3.eu-west-2.amazonaws.com'
-    File: '$(Build.ArtifactStagingDirectory)/'
-    Key: AKIAVUPJDLUD4QNARYEQ
+    awsCredentials: 'AWS S3'
+    regionName: 'eu-west-2'
+    bucketName: 'www.lap-it.com'
+    globExpressions: '**'
+    filesAcl: 'public-read'
+
+
+
