@@ -10,15 +10,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: S3Upload@0
+- task: S3Upload@1
   inputs:
-    BucketName: 'www.lap-it.com.s3.eu-west-2.amazonaws.com'
-    File: '$(Build.ArtifactStagingDirectory)/'
-    Key: 
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+    awsCredentials: 'AWS S3'
+    regionName: 'eu-west-2'
+    bucketName: 'www.lap-it.com'
+    globExpressions: '**'
+    filesAcl: 'public-read'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
+
