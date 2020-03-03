@@ -1,13 +1,11 @@
 <html>
 <head>
-    <title>Contact Us</title>
+    <title>Suggestion Box</title>
 </head>
 <body>
-    <h1>Contact Us</h1>
+    <h1>Suggestion Box</h1>
     <form onsubmit="return submitForm()">
-        Name: <input id="form-name" /><br />
-        Email: <input id="form-email" /><br />
-        Subject: <input id="form-subject" /><br />
+        Team: <input id="form-subject" /><br />
         Message: <br />
         <textarea id="form-message" rows="10" cols="80"></textarea><br />
         <input type="submit" value="Submit" />
@@ -19,9 +17,7 @@
             superagent
                 .post('https://prod-16.uksouth.logic.azure.com:443/workflows/dbbfd076bfd44131a69c7c3292bc4225/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=entw_C3QCyG6vMF17fgeiYGmo5m3M71ecIchjWcQtBY')
                 .send({ 
-                    name: document.getElementById('form-name').value,
-                    email: document.getElementById('form-email').value,
-                    subject: document.getElementById('form-subject').value,
+                    team: document.getElementById('form-subject').value,
                     message: document.getElementById('form-message').value
                 })
                 .end(function(err, res){
