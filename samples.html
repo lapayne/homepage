@@ -75,7 +75,7 @@
             <div class="w-100">
                 <form onsubmit="return submitForm()" enctype="multipart/form-data">
                     <label for="URLInput">Please choose a file:</label>
-                    <input type="text" id="URLInput" name="URLInput"><br />
+                    <input type="file" id="URL" name="URL"><br />
                     <input type="submit" value="Submit" />
                 </form>
             
@@ -85,7 +85,7 @@
                         superagent
                             .post('https://prod-10.ukwest.logic.azure.com/workflows/764c5779491c4f338e3d4e4bc4b58f9f/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=RaY8xMYNwUKo_amG_hUdxgIXQP5Ys2zqMk6FP9Tvo0A')
                             .send({
-                                URL: document.getElementById('URLInput').value
+                                URL: document.getElementById('URL').value
                             })
                             .end(function(err, res){
                                 if (err || !res.ok) {
