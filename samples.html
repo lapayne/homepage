@@ -97,7 +97,7 @@ for (var key in files) {
                                 if (err || !res.ok) {
                                     alert('Whoops. Something went wrong.');
                                 } else {
-                                    alert("I think you uploaded a picture of " + res.body[0] + " I think the tags relevant to this are: " + res.body[1] + " The objects I can see are: " + res.body[2]);
+                                    alert("I think you uploaded a picture of " + res.body[0] + " I think the tags relevant to this are: " + res.body[1]);
                                     window.location.href = "samples.html";
                                 }
                             });
