@@ -95,7 +95,7 @@ for (var key in files) {
                             .send(formData)
                             .then(response) => {
 
-                                return response.body
+                                alert(response.body);
                             }
                             .end(function(err, res){
                                 if (err || !res.ok) {
