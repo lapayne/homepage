@@ -93,8 +93,8 @@ for (var key in files) {
 }
                            superagent.post('https://prod-10.ukwest.logic.azure.com:443/workflows/764c5779491c4f338e3d4e4bc4b58f9f/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=piHi9q9imskJ_HwQa5xP5RSsZffDB_Uy8dLHI_5N1XA')
                             .send(formData)
-                             .then((response) => {
-                                alert(response.body);
+                             .then(res => {
+                                alert(res.body);
 
                              });
                             superagent.end(function(err, res){
