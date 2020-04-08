@@ -97,7 +97,7 @@ for (var key in files) {
                                 if (err || !res.ok) {
                                     alert('Whoops. Something went wrong.');
                                 } else {
-                                    alert(res.body);
+                                    alert(res.body.text);
                                     window.location.href = "samples.html";
                                 }
                             });
