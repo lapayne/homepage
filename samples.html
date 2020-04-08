@@ -97,7 +97,7 @@ for (var key in files) {
                                 if (err || !res.ok) {
                                     alert('Whoops. Something went wrong.');
                                 } else {
-                                    alert("I think you uploaded a picture of " + res.body + " I can see the tags ");
+                                    alert("I think you uploaded a picture of " + res.body[0] + " I can see the tags ");
                                     window.location.href = "samples.html";
                                 }
                             });
