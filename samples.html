@@ -42,23 +42,10 @@
                     <a class="nav-link js-scroll-trigger" href="#vision">Image Identification</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+                    <a class="nav-link js-scroll-trigger" href="#ocr">OCR example</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#certification">Certification</a>
-
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#articles">Articles</a>
+                    <a class="nav-link js-scroll-trigger" href="#translate">Text translation</a>
                 </li>
             </ul>
         </div>
@@ -97,7 +84,7 @@ for (var key in files) {
                                 if (err || !res.ok) {
                                     alert('Whoops. Something went wrong.');
                                 } else {
-                                    str = re.body[1].replace(/"/g,"");
+                                    str = res.body[1].replace(/"/g,"");
                                     alert("I think you uploaded a picture of " + res.body[0].substring(2, res.body[0].length -2) + "\nI think the words to describe it are: " + str.substring(1,res.body[1].length-1));
                                     window.location.href = "samples.html";
                                 }
