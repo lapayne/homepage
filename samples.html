@@ -102,7 +102,7 @@ for (var key in files) {
 
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="ocr">
             <div class="w-100">
-                <h2>Picture Analysis</h2><br/>
+                <h2>OCR Analysis</h2><br/>
                 This uses Azure cognitive services to take a pdf document and return a plain text version of it.<br/>
                 <form onsubmit="return submitFormocr()" enctype="multipart/form-data">
                     <label for="OCRInput">Please choose a file:</label>
@@ -113,10 +113,10 @@ for (var key in files) {
                 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
                 <script>
                     function submitFormocr() {
- var filesocr = document.getElementById('OCRinput').files;
+ var filesocr = document.getElementById('OCRInput').files;
 var formDataocr = new FormData();
 
-for (var keyocr in filesocr) {
+for (var keyocr in fileocr) {
     // is the item a File?
     if (fileocrs.hasOwnProperty(keyocr) && files[keyocr] instanceof File) {
         formDataocr.append(keyocr, fileocrs[keyocr]);
