@@ -100,26 +100,26 @@ for (var key in files) {
 
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="ocr">
             <div class="w-100">
-                <form onsubmit="return submitForm()" enctype="multipart/form-data">
+                <form onsubmit="return submitFormocr()" enctype="multipart/form-data">
                     <label for="OCRInput">Please choose a file:</label>
                     <input type="file" id="OCRinput" name="OCRinput"><br />
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value="Submitocr" />
                 </form>
             
                 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
                 <script>
-                    function submitForm() {
- var files = document.getElementById('OCRinput').files;
-var formData = new FormData();
+                    function submitFormocr() {
+ var filesocr = document.getElementById('OCRinput').files;
+var formDataocr = new FormData();
 
-for (var key in files) {
+for (var keyocr in filesocr) {
     // is the item a File?
-    if (files.hasOwnProperty(key) && files[key] instanceof File) {
-        formData.append(key, files[key]);
+    if (fileocrs.hasOwnProperty(keyocr) && files[keyocr] instanceof File) {
+        formDatocra.append(keocry, fileocrs[keyocr]);
     }
 }
                            superagent.post('https://prod-07.ukwest.logic.azure.com:443/workflows/efd6216945c84015a1dc76f9bdc403c2/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=N3TA3Oanw2pJ87qMSsFXjuhb5Prddyflg6o6dZaK5dI')
-                            .send(formData)
+                            .send(formDataocr)
                             .end(function(err, res){
                                 if (err || !res.ok) {
                                     alert('Whoops. Something went wrong.');
