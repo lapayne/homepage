@@ -101,15 +101,15 @@ for (var key in files) {
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="ocr">
             <div class="w-100">
                 <form onsubmit="return submitForm()" enctype="multipart/form-data">
-                    <label for="URLInput">Please choose a file:</label>
-                    <input type="file" id="URL" name="URL"><br />
+                    <label for="OCRInput">Please choose a file:</label>
+                    <input type="file" id="OCRinput" name="OCRinput"><br />
                     <input type="submit" value="Submit" />
                 </form>
             
                 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
                 <script>
                     function submitForm() {
- var files = document.getElementById('URL').files;
+ var files = document.getElementById('OCRinput').files;
 var formData = new FormData();
 
 for (var key in files) {
