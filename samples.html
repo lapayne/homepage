@@ -87,7 +87,7 @@ for (var key in files) {
                                     alert('Whoops. Something went wrong.');
                                 } else {
                                     str = res.body[1].replace(/"/g,"");
-                                    alert("I think you uploaded a picture of " + res.body[0].substring(2, res.body[0].length -2) + "\nI think the words to describe it are: " + str.substring(1,str.length-1));
+                                    alert("I think you uploaded a picture of " + res.body[0].substring(2, res.body[0].length -2) + "\nI think the words to describe it are: " + str.substring(1,res.body[1].length-1));
                                     window.location.href = "samples.html";
                                 }
                             });
