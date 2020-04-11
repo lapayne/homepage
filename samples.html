@@ -99,16 +99,16 @@ for (var key in files) {
             <div class="w-100">
                 <h2>OCR Analysis</h2><br/>
                 This uses Azure cognitive services to take a pdf document and return a plain text version of it.<br/>
-                <form onsubmit="return submitFormocr()" enctype="multipart/form-data">
-                    <label for="OCRInput">Please choose a file:</label>
-                    <input type="file" id="OCRinput" name="OCRinput"><br />
+                <form onsubmit="return submitocr()" enctype="multipart/form-data">
+                    <label for="OCR">Please choose a file:</label>
+                    <input type="file" id="OCR" name="OCR"><br />
                     <input type="submit" value="Submit" />
                 </form>
             
                 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
                 <script>
-                    function submitFormocr() {
- var fileocr = document.getElementById('OCRInput').files;
+                    function submitocr() {
+ var fileocr = document.getElementById('OCR').files;
 var formDataocr = new FormData();
 
 for (var keyocr in fileocr) {
