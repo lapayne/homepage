@@ -53,11 +53,6 @@
 
     <div class="container-fluid p-0">
 
-                
-
-
-
-
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="vision">
             <div class="w-100">
                 <h2>Picture Analysis</h2><br/>
@@ -107,7 +102,7 @@ for (var key in files) {
                 <form onsubmit="return submitFormocr()" enctype="multipart/form-data">
                     <label for="OCRInput">Please choose a file:</label>
                     <input type="file" id="OCRinput" name="OCRinput"><br />
-                    <input type="submit" value="Submitocr" />
+                    <input type="submit" value="Submit" />
                 </form>
             
                 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
@@ -118,8 +113,8 @@ var formDataocr = new FormData();
 
 for (var keyocr in fileocr) {
     // is the item a File?
-    if (fileocrs.hasOwnProperty(keyocr) && files[keyocr] instanceof File) {
-        formDataocr.append(keyocr, fileocrs[keyocr]);
+    if (fileocr.hasOwnProperty(keyocr) && files[keyocr] instanceof File) {
+        formDataocr.append(keyocr, fileocr[keyocr]);
     }
 }
                            superagent.post('https://prod-07.ukwest.logic.azure.com:443/workflows/efd6216945c84015a1dc76f9bdc403c2/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=N3TA3Oanw2pJ87qMSsFXjuhb5Prddyflg6o6dZaK5dI')
