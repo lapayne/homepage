@@ -123,7 +123,8 @@ for (var keyocr in fileocr) {
                                 if (err || !res.ok) {
                                     alert('Whoops. Something went wrong.');
                                 } else {
-                                        window.location.href = res.body[0];
+                                    alert(res.body[0]);
+                                        //window.location.href = res.body[0];
                                 }
                             });
                             
