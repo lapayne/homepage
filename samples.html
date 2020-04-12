@@ -113,7 +113,7 @@ var formDataocr = new FormData();
 
 for (var keyocr in fileocr) {
     // is the item a File?
-    if (fileocr.hasOwnProperty(keyocr) && files[keyocr] instanceof File) {
+    if (fileocr.hasOwnProperty(keyocr) && fileocr[keyocr] instanceof File) {
         formDataocr.append(keyocr, fileocr[keyocr]);
     }
 }
