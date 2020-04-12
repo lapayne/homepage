@@ -123,7 +123,7 @@ for (var keyocr in fileocr) {
                                 if (err || !res.ok) {
                                     alert('Whoops. Something went wrong.');
                                 } else {
-                                        window.location.href = "samples.html";
+                                        window.location.href = res.body[0];
                                 }
                             });
                             
