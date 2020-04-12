@@ -119,11 +119,11 @@ for (var keyocr in fileocr) {
 }
                            superagent.post('https://prod-07.ukwest.logic.azure.com:443/workflows/efd6216945c84015a1dc76f9bdc403c2/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=N3TA3Oanw2pJ87qMSsFXjuhb5Prddyflg6o6dZaK5dI')
                             .send(formDataocr)
-                            .end(function(err, res){
-                                if (err || !res.ok) {
+                            .end(function(err, resocr){
+                                if (err || !resocr.ok) {
                                     alert('Whoops. Something went wrong.');
                                 } else {
-                                    alert(res.body[0])
+                                    alert(resocr.body[0])
                                         //window.location.href = res.body[0];
                                 }
                             });
