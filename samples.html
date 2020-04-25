@@ -98,7 +98,7 @@ for (var key in files) {
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="ocr">
             <div class="w-100">
                 <h2>OCR Analysis</h2><br/>
-                This uses Azure cognitive services to take a pdf document and return a plain text version of it.<br/>
+                This uses Azure cognitive services to take a image and return a plain text version of it.<br/>
                 <form onsubmit="return submitocr()" enctype="multipart/form-data">
                     <label for="OCR">Please choose a file:</label>
                     <input type="file" id="OCR" name="OCR"><br />
@@ -119,14 +119,14 @@ for (var keyocr in fileocr) {
 }
                            superagent.post('https://prod-07.ukwest.logic.azure.com:443/workflows/efd6216945c84015a1dc76f9bdc403c2/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=N3TA3Oanw2pJ87qMSsFXjuhb5Prddyflg6o6dZaK5dI')
                             .send(formDataocr)
-                            .end(function(err, resocr){
-                                if (err || !resocr.ok) {
+                            .end(function(ocrerr, resocr){
+                                if (ocrerr || !resocr.ok) {
                                     alert('Whoops. Something went wrong.');
                                 } else {
-                                   //alert(resocr.body[0].substring(2,resocr.body[0].length -1))
-                                        //window.location.href = res.body[0];
-                                        window.location= 'https://lapitstore.blob.core.windows.net/vision/Guid.txt;
+                                        window.location = resocr.body[0];
+                                        //window.location= 'https:/lapitstore.blob.core.windows.net/vision/Guid.txt';
                                         element.click();
+                                       
                                 }
                             });
                             
