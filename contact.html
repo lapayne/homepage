@@ -5,12 +5,6 @@
 <body> 
     <h1>Suggestion Box</h1>
     <form onsubmit="return submitForm()">
-        Team: <select id="form-subject">
-            <option value="Environments">Environments</option>
-            <option value="Foundations">Foundations</option>
-            <option value="PlansSupport">Plans Support</option>
-            <option value="No">Dont want to say</option>
-          </select>
         <br />
         Message: <br />
         <textarea id="form-message" rows="10" cols="80"></textarea><br />
@@ -21,9 +15,8 @@
     <script>
         function submitForm() {
             superagent
-                .post('https://prod-16.uksouth.logic.azure.com:443/workflows/dbbfd076bfd44131a69c7c3292bc4225/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=entw_C3QCyG6vMF17fgeiYGmo5m3M71ecIchjWcQtBY')
+                .post('https://prod-11.uksouth.logic.azure.com:443/workflows/155d95ce07234de784a9ae7cbc5385c1/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=apPV_YA9crAvcK7gFF7elsnwhQTRt8_0l6MehKGUIX0')
                 .send({ 
-                    subject: document.getElementById('form-subject').value,
                     message: document.getElementById('form-message').value
                 })
                 .end(function(err, res){
