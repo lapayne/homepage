@@ -20,7 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/resume.css" rel="stylesheet">
-<script type="text/javascript">
+<script >
 !function(T,l,y){var S=T.location,u="script",k="instrumentationKey",D="ingestionendpoint",C="disableExceptionTracking",E="ai.device.",I="toLowerCase",b="crossOrigin",w="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"4",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[I](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,p,l,u;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][I]()]=i[1])}if(!e[D]){var r=e.endpointsuffix,o=r?e.location:null;e[D]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[k]||d[k]||"",p=s[D],l=p?p+"/v2/track":config.endpointUrl,(u=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=l,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),u.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,l)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:w,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(w,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(u,l))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(u);n.src=h;var e=y[b];return!e&&""!==e||"undefined"==n[b]||(n[b]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(u)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[C]&&!0!==s[C]){method="onerror",t(["_"+method]);var c=T[method];T[method]=function(e,t,n,a,i){var r=c&&c(e,t,n,a,i);return!0!==r&&m["_"+method]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);(T[t]=n).queue&&0===n.queue.length&&n.trackPageView({})}(window,document,{
 src: "https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js", // The SDK URL Source
 //name: "appInsights", // Global SDK Instance name defaults to "appInsights" when not supplied
@@ -146,18 +146,19 @@ cfg: { // Application Insights Configuration
                         <div class="subheading mb-3">Computershare</div>
                         <p>
                             Key Responsibilities:
-
+                        <ul>
                             <li>Managing seven engineers including appraisals and performance management</li>
                             <li>Working with development, operational and architectural staff</li>
                             <li>Working with business units to understand their needs and requirements</li>
-
+                        </ul>
                             Major Successes:
-
+                            <ul>
                             <li>Restored the function to a fit state after losing their management structure</li>
                             <li>Converting a traditional web hosting team to be a Site Reliability Engineering function</li>
                             <li>Upskilling the engineers to reduce single points of failure and manage azure</li>
                             <li>Developed a comprehensive training plan to prepare for future required skills</li>
                             <li>Implemented M365 support into BAU/run teams globally when it was currently unsupported</li>
+                        </ul>
                         </p>
                     </div>
                     <div class="resume-date text-md-right">
@@ -171,6 +172,7 @@ cfg: { // Application Insights Configuration
                         <div class="subheading mb-3">Computershare</div>
                         <p>
                           <h3 class="mb-3">Key Responsibilities:</h3>
+                          <ul>
                             <li>Managing vendor relationships</li>
                             <li>Assisting with CAPEX/OPEX requirements for the business</li>
                             <li>Managing a portfolio of projects for business improvement</li>
@@ -180,8 +182,9 @@ cfg: { // Application Insights Configuration
                             <li>Line management of 13 engineers including developing PDP’s and appraisals.</li>
                             <li>Managing change management including risk analysis</li>
                             <li>Created and managed team skills matrix and identified training requirements.</li>
-
+                        </ul>
                             <h3 class="mb-3"> Major successes:</h3>
+                            <ul>
                             <li>Reduced outstanding support tickets by 70%</li>
                             <li>Developed a 3-year strategy for the team</li>
                             <li>Managed the DR testing exercise for all infrastructure</li>
@@ -193,6 +196,7 @@ cfg: { // Application Insights Configuration
                             <li>Developed a system of project control which was adopted by other teams</li>
                             <li>Implemented a programme of work which reduced outstanding security issues by 80%</li>
                             <li>Merged two disparate teams into one and reduced silos of knowledge with no staff turnover</li>
+                        </ul>
                         </p>
                     </div>
                     <div class="resume-date text-md-right">
@@ -206,6 +210,7 @@ cfg: { // Application Insights Configuration
                         <div class="subheading mb-3">Computershare</div>
                         <p>
                           <h3 class="mb-3">Key Responsibilities:</h3>
+                          <ul>
                             <li>Managing vendor relationships.</li>
                             <li>Assisting with CAPEX/OPEX requirement for the business</li>
                             <li>Managing CAPEX budget spend</li>
@@ -218,8 +223,9 @@ cfg: { // Application Insights Configuration
                             <li>Managing change management processes.</li>
                             <li>Managing resource utilisation within the team.</li>
                             <li>Created and managed team skills matrix and identified training needs.</li>
-
+                        </ul>
                             <h3 class="mb-3">Major Projects:</h3>
+                            <ul>
                             <li>Expanded the team from 2 to 8 engineers and ensured we had the correct skills mix</li>
                             <li>Worked with the service desk to transition routine duties freeing up 3rd line resources.</li>
                             <li>Worked with application support teams to enable them to self service requests enabling business agility and innovation.</li>
@@ -228,6 +234,7 @@ cfg: { // Application Insights Configuration
                             <li>Worked with global teams to achieve a follow the sun model.</li>
                             <li>Merged network and voice specialists into a single team and ensured they were cross skilled.</li>
                             <li>Created long term development and training plans for all engineers to develop their full potential.</li>
+                        </ul>
                         </p>
                     </div>
                     <div class="resume-date text-md-right">
@@ -512,44 +519,49 @@ cfg: { // Application Insights Configuration
                             <b>Being a Leader</b><br><br>
                             Description: This unit has been designed for learners who want to develop or sharpen their professional edge and enhance personal effectiveness. Learners will evaluate the impact of an organisations structure and governance on management and leadership. They will explore theoretical models, management and leadership styles and approaches designed to promote a culture of mutual trust, respect and support.
                             <br><br><b>Learning outcomes</b>
-                            
+                            <ul>
                             <li>    Understand factors which impact on an organisation’s internal environment</li>
                             <li> Understand the application of management and leadership theories</li>
                             <li>  Understand the knowledge, skills and behaviours to be effective in a management and leadership role</li>
+                        </ul>
                         <br><br>
                             <b>Managing Team and Individual Performance</b><br><br>
                             Description: This unit evaluates the reasons for managing performance and the approaches that can be used. It explores methods of rewarding the performance of individuals who exceed expectations, and analyses ways of managing under performance in a professional and supportive manner.
 
                             This unit focuses on the way performance management, when used effectively, is able to impact on individual and organisational achievement.
                         <br><br><b>Learning outcomes</b>
-                            
+                            <ul>
                             <li>  Understand the rationale for managing performance within organisations</li>
                             <li>   Understand frameworks, diagnostic and evaluation tools used for performance management</li>
                             <li>   Know how to manage performance</li>
+                        </ul>
                         <br><br>
                             <b>Project Development and Control</b><br><br>
                             Description: This unit focuses on the knowledge and skills required to manage projects successfully and overcome problems and challenges. It requires the learner to evaluate the methods and tools for planning tasks and activities, as well as knowing how to implement and manage project activities, build stakeholder relationships, manage resources and risk, monitor progress and report on outcomes.
                         <br><br><b>Learning outcomes</b>
-                            
+                            <ul>
                             <li>    Understand the role of projects in delivering organisational strategy</li>
                             <li>    Understand processes for initiating, planning and managing projects</li>
                             <li>    Understand the factors which contribute to effective project management</li>
+                        </ul>
                         <br><br>
                             <b>Managing Recruitment, Selection and Induction</b><br><br>
                             Description: This unit has been designed to equip learners with an understanding of the factors which impact on recruitment. They will know how to develop plans and strategies for selecting staff, and identify approaches for retaining the best of the best.
                         <br><br> <b>Learning outcomes</b>
-
+                        <ul>
                             <li>   Understand the factors that impact on recruitment and selection</li>
                             <li>   Know how to plan for recruitment and selection</li>
                             <li>   Understand approaches to the recruitment and selection of a diverse and talented workforce</li>
                             <li>  Understand strategies for retaining talent</li>
+                        </ul>
                         <br><br>
                             <b>Organisational Financial Management</b><br><br>
                             The aim of this unit is to enable learners to understand how financial systems operate within organisations. Learners will evaluate the sources of finance for organisations, and understand the principles for setting and managing budgets in line with regulatory and organisational guidelines. This unit has been designed to enhance the learner’s confidence and credibility in financial management, which will translate into improved management skills.
                         <br><br><b>Learning outcomes</b>
-
+                        <ul>
                             <li>   Understand finance within organisations</li>
                             <li>   Know how to set and manage budgets </li>
+                        </ul>
                         <br><br>
                         </p>
                     </div>
@@ -792,7 +804,7 @@ cfg: { // Application Insights Configuration
                             <input type="submit" value="Submit" />
                         </form>
                     
-                        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
+                        <script src="//cdnjs.cloudflare.com/ajax/libs/superagent/2.2.0/superagent.min.js"></script>
                         <script>
                             function submitForm() {
                                 superagent
