@@ -990,10 +990,11 @@ if (fileocr.hasOwnProperty(keyocr) && fileocr[keyocr] instanceof File) {
             <script>
                 function sbaddsubmitForm() {
                     superagent
-                        .post('https://prod-28.uksouth.logic.azure.com:443/workflows/06ffc05c75964d79bd8a5c7991ec1562/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=0TessRPraU9gTtmUpad9AVGiUyDnPKVEiVwlnSwSJ6k')                       
+                        .post('https://lapsample.azure-api.net/pushToQueue/manual/paths/invoke')                       
                          .send({
                             message: document.getElementById('form-sbaddmessage').value
                         })
+                        .set('Ocp-Apim-Subscription-Key', "2afb4c25ad7d4ec3899d4287b9c7c152")
                         .end(function(sbadderr, sbaddres){
                             if (sbadderr || !sbaddres.ok) {
                                 alert('Whoops. Something went wrong.');
@@ -1018,10 +1019,11 @@ if (fileocr.hasOwnProperty(keyocr) && fileocr[keyocr] instanceof File) {
                 <script>
                     function sbgetsubmitForm() {
                         superagent
-                            .post('https://prod-15.uksouth.logic.azure.com:443/workflows/5f290cd4e0f44e8aaa1c180601443c93/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=nuO6RizEm9SFJEHNQ-DTIsgHBd9GALC7n3XN3_Jy94k')
+                            .post('https://lapsample.azure-api.net/popFromQueue/manual/paths/invoke')
                             .send({
                                 message: document.getElementById('form-sbgetmessage').value
                             })
+                            .set('Ocp-Apim-Subscription-Key', "2afb4c25ad7d4ec3899d4287b9c7c152")
                             .end(function(sbgeterr, sbgetres){
                                 if (sbgeterr || !sbgetres.ok) {
                                     document.getElementById("form-sbgetmessage").value = "There are no messages in the queue";
