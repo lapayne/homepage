@@ -881,8 +881,9 @@ if (fileocr.hasOwnProperty(keyocr) && fileocr[keyocr] instanceof File) {
   formDataocr.append(keyocr, fileocr[keyocr]);
 }
 }
-                     superagent.post('https://prod-10.ukwest.logic.azure.com:443/workflows/764c5779491c4f338e3d4e4bc4b58f9f/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=piHi9q9imskJ_HwQa5xP5RSsZffDB_Uy8dLHI_5N1XA')
+                     superagent.post('https://lapsample.azure-api.net/describeImage/request/paths/invoke')
                       .send(formDataocr)
+                      .set('Ocp-Apim-Subscription-Key', "2afb4c25ad7d4ec3899d4287b9c7c152")
                       .end(function(ocrerr, resocr){
                           if (ocrerr || !resocr.ok) {
                               alert('Whoops. Something went wrong.');
